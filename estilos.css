@@ -1,58 +1,76 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f9ff;
-  color: #333;
+  background-color: #f0f8ff;
   padding: 20px;
-  text-align: center;
+  color: #333;
 }
 
 h1 {
-  color: #4a5e82;
+  text-align: center;
+  color: #4c4c7f;
 }
 
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+.malla-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
   margin-top: 30px;
 }
 
 .ramo {
-  background-color: #a6d4f2;
-  border: 2px solid #a6bdf7;
-  border-radius: 8px;
-  width: 220px;
+  border: 2px solid #ccc;
   padding: 15px;
-  box-shadow: 0 0 10px #ccc;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-  position: relative;
+  border-radius: 12px;
+  background-color: #a6d4f2;
+  transition: background-color 0.3s ease;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.ramo:hover {
-  transform: scale(1.05);
+.ramo h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #333;
 }
 
-.ramo.bloqueado {
-  background-color: #ddd;
-  border-color: #ccc;
-  color: #888;
-  cursor: not-allowed;
-}
-
-.ramo.aprobado {
+.ramo button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
   background-color: #75921e;
-  color: #fff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-.creditos {
-  font-size: 0.85em;
-  margin-top: 8px;
+.ramo button:hover {
+  background-color: #5c751a;
 }
 
-.semestre {
-  font-weight: bold;
-  margin-top: 5px;
+.bloqueado {
+  background-color: #ddd;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.aprobado {
+  background-color: #a6bdf7;
+}
+
+.reinicio-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4c4c7f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.reinicio-btn:hover {
+  background-color: #36365f;
+}
+
 }
 
